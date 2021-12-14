@@ -8,9 +8,9 @@ from .permissions import IsAuthenticatedOrReadOnly
 class ElectronicsList(generics.ListCreateAPIView):
     queryset = Electronics.objects.all()
     serializer_class = ElectronicsSerializers
-    permission_classes = (IsAuthenticatedOrReadOnly,)
+    permission_class = (IsAuthenticatedOrReadOnly,)
     
 class ElectronicsDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Electronics.objects.all()
     serializer_class = ElectronicsSerializers
-    permission_classes = (IsAuthenticatedOrReadOnly,)
+    permission_class = (IsAuthenticatedOrReadOnly,)
